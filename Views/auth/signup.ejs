@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page</title>
+    <link rel="stylesheet" href="style-1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        * {
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,400&display=swap');
+            font-family: 'Poppins', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: gray;
+        }
+
+        .login-page {
+            width: 100%;
+            height: 100vh;
+            overflow: hiden;
+
+            display: inline-block;
+            display: flex;
+            align-items: center;
+            background: url('/assets/images/auth/bg.png');
+            background-size: cover;
+            background-position: left center;
+        }
+
+        .form-right i {
+            font-size: 100px;
+        }
+
+        .logo img {
+            /* height: 40px; */
+            width: auto;
+        }
+
+
+
+        /* /Don't forget to add Font Awesome CSS : "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/ */
+        input[type="text"],
+        input[type="email"] {
+            width: 50%;
+            border: 1px solid #A952A5;
+            border-radius: 4px;
+            margin: 8px 0;
+            outline: none;
+            padding: 8px;
+            box-sizing: border-box;
+            transition: 0.3s;
+        }
+
+
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+            border-color: dodgerBlue;
+            box-shadow: 0 0 8px 0 dodgerBlue;
+        }
+
+        .inputWithIcon input[type="text"],
+        .inputWithIcon input[type="email"] {
+            padding-left: 10px;
+        }
+
+
+        .inputWithIcon {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+
+        .inputWithIcon input[type="text"]:focus+i,
+        .inputWithIcon input[type="email"]:focus+i {
+            color: dodgerBlue;
+        }
+
+        .inputWithIcon.inputIconBg i {
+            background-color: #aaa;
+            color: #fff;
+            padding: 9px 4px;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .inputWithIcon.inputIconBg input[type="text"]:focus+i,
+        .inputWithIcon.inputIconBg input[type="email"]:focus+i {
+            color: #fff;
+            background-color: dodgerBlue;
+        }
+
+        /* .signup-btn {
+            width: 500px;
+            padding: 1em 3em;
+            border-radius: 2em;
+            background: linear-gradient(to right, #56b8dd, #6e80e6, #8467e7, #b444ee, #e639f7, #c63bf0);
+            color: white;
+            font-size: 14px;
+        } */
+        /* .login-btn a:hover{
+            color: white;
+        } */
+        .login-with img {
+            width: 20px;
+            height: auto;
+
+        }
+
+        .login-with {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+        }
+
+        .icon-holder {
+            /* display: inline-block; */
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: inline-flex;
+            justify-content: center;
+            box-shadow: inset 0 0 10px #EEEEEF;
+            border: 2px solid #EEEEEF;
+            align-items: center;
+        }
+
+        .inline-block {
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+            padding: 1em 3em;
+            border-radius: 0.5em;
+            background: linear-gradient(to right, #56b8dd, #6e80e6, #8467e7, #b444ee, #e639f7, #c63bf0);
+            color: white;
+            font-size: 14px;
+            border: none;
+        }
+
+        @media(max-width: 458px) {
+            .login-page {
+                /* align-items: flex-start; */
+                padding-top: 12px;
+
+            }
+
+            .logo img {
+                height: 28px;
+            }
+
+            .links span {
+                font-size: 15px;
+            }
+
+            .container {
+                width: 100% !important;
+            }
+
+            /* margin: 5px auto !important; */
+            /* padding: 10px 15px !important; */
+
+            .header h2 {
+                margin-top: 34px !important;
+                margin-bottom: 21px !important;
+            }
+        }
+
+
+
+
+        form input::placeholder {
+            font-size: 15px;
+            color: #999999;
+        }
+
+
+        .logo img {
+            height: 30px;
+            ;
+        }
+
+        /* less than <=576 device  responsive screen size  */
+        /* width: 375px !important;
+        height: 812px !important; */
+        @media(max-width: 375px) {
+            .login-page {
+                background-image: none;
+                height: 707px !important;
+            }
+
+            .login-with {
+                justify-content: center;
+                margin-bottom: 20px !important;
+            }
+
+            .ch1 {
+                display: none !important;
+            }
+
+            .inputWithIcon {
+                display: block;
+            }
+
+
+            /* /Don't forget to add Font Awesome CSS : "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/ */
+            input[type="text"],
+            input[type="email"] {
+                width: 100% !important;
+                border: 1px solid transparent;
+                background-color: #F5F5F5;
+                border-radius: 10px;
+
+            }
+
+            .visible_ch1 {
+                display: block !important;
+            }
+
+            .unvisible_ch1 {
+                display: none;
+            }
+
+            .header h2 {
+                margin-top: 34px !important;
+                margin-bottom: 21px !important;
+                /* margin-left: 26px !important; */
+                /* margin-right: 100px !important; */
+
+
+
+                color: #3D3D3D;
+                font-family: Poppins;
+                font-size: 26px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+
+            .login-page {
+                background: none !important;
+            }
+
+            .container {
+                border: 2px solid transparent;
+                width: 375px !important;
+                height: 707px !important;
+
+                margin-left: 20px !important;
+                margin-right: 20px !important;
+                padding: 5px !important;
+            }
+
+            .mbb {
+                margin-bottom: 15px !important;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="login-page bg-light" style="border: 1px solid transparent;">
+        <div class="container bg-white pt-3 pb-3 pe-5 ps-5 d-flex flex-column justify-content-between" style="width:100%!important; min-height:420px;border-radius:10px; ;">
+            <div class="d-flex align-items-center justify-content-between ch1">
+                <div class="logo">
+                    <svg width="39" height="40" viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="39" height="40" rx="6" fill="#2871FF" />
+                        <path
+                            d="M9.5 15.1C9.5 13.1398 9.5 12.1597 9.88148 11.411C10.217 10.7525 10.7525 10.217 11.411 9.88148C12.1597 9.5 13.1398 9.5 15.1 9.5H24.9C26.8602 9.5 27.8403 9.5 28.589 9.88148C29.2475 10.217 29.783 10.7525 30.1185 11.411C30.5 12.1597 30.5 13.1398 30.5 15.1V21.75C30.5 23.3808 30.5 24.1962 30.2336 24.8394C29.8783 25.697 29.197 26.3783 28.3394 26.7336C27.6962 27 26.8808 27 25.25 27C24.68 27 24.395 27 24.1306 27.0624C23.778 27.1456 23.4497 27.3098 23.1716 27.5419C22.963 27.716 22.792 27.944 22.45 28.4L20.7467 30.6711C20.4934 31.0089 20.3667 31.1777 20.2114 31.2381C20.0754 31.291 19.9246 31.291 19.7886 31.2381C19.6333 31.1777 19.5066 31.0089 19.2533 30.6711L17.55 28.4C17.208 27.944 17.037 27.716 16.8284 27.5419C16.5503 27.3098 16.222 27.1456 15.8694 27.0624C15.605 27 15.32 27 14.75 27C13.1192 27 12.3038 27 11.6606 26.7336C10.803 26.3783 10.1217 25.697 9.76642 24.8394C9.5 24.1962 9.5 23.3808 9.5 21.75V15.1Z"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M19.9968 15.719C19.0638 14.6585 17.5079 14.3733 16.3389 15.3444C15.1698 16.3155 15.0053 17.9391 15.9233 19.0876C16.4692 19.7706 17.8063 20.9953 18.8006 21.8759C19.211 22.2395 19.4162 22.4212 19.6633 22.4949C19.8746 22.558 20.119 22.558 20.3304 22.4949C20.5774 22.4212 20.7826 22.2395 21.193 21.8759C22.1873 20.9953 23.5244 19.7706 24.0703 19.0876C24.9884 17.9391 24.8439 16.3052 23.6547 15.3444C22.4656 14.3835 20.9298 14.6585 19.9968 15.719Z"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Framewiz</span>
+                    <!-- <img src="/assets/images/auth/logo.png" alt="" style="width: 100%;"> -->
+                </div>
+                <div class="links">
+                    <span>Already A User?</span>
+                    <span><a href="/login" style="color:  #407BFF;"> <b>Login</b></a></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12 ch1">
+                    <img src="/assets/images/auth/signup.png" alt="" style="width: 100%;">
+                </div>
+                <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12 d-flex justify-content-center flex-column">
+                    <div class="header mb-3">
+                        <h2><b>Create Account!</b></h2>
+                        <span class="ch1" style="color: #808080	;
+                        ">Create an account by filling in info below.</span>
+                    </div>
+                    <!-- <%if(err_email){%>
+                        <div style="color: red;">
+                            <%=err_email%>
+                        </div>
+
+                        <%}%> -->
+
+                    <%if(err_mobile){%>
+                        <div class="alert alert-danger text-center">
+                            <!-- {{ session('error') }} -->
+                            <div>
+                                <%= err_mobile %>
+                            </div>
+                        </div>
+                        <%}%>
+
+                            <!-- 
+                            <% if (err_mbl) { %>
+                                <div style="color: red;">
+                                    <%= err_mobile %>
+                                </div>
+                                <% } %> -->
+
+
+                            <!-- @if (session('error'))
+                    <div style="color: red;">{{$message}}</div>
+                    @endif -->
+
+                            <form method="POST" action="/sendOtp" style="">
+                                <!-- @csrf -->
+                                <div class="inputWithIcon">
+                                    <!-- @error('first_name')
+                            <div style="color: red;">{{$message}}</div>
+                            @enderror -->
+                                    <label for="">First Name*</label>
+
+
+                                    <input class="me-3 mbb" type="text" placeholder="Shahahnaz Akter*" name="first_name" required>
+
+                                    <!-- @error('last_name')
+                            <div style="color: red;">{{$message}}</div>
+                            @enderror -->
+                                    <label for="">Last Name*</label>
+
+                                    <input class="mbb" type="text" placeholder="Mimi*" name="last_name" required>
+
+                                </div>
+
+                                <div class="inputWithIcon">
+                                    <!-- @error('user_name')
+                            <div style="color: red;">{{$message}}</div>
+                            @enderror -->
+                                    <!-- <input class="me-3" type="text" placeholder="User Name*" name="user_name"> -->
+
+                                    <!-- @error('email')
+                            <div style="color: red;">{{$message}}</div>
+                            @enderror -->
+
+                                    <label for="">Email*</label>
+
+                                    <input class="me-3 mbb" type="email" placeholder="xyz@gmail.com*" name="email">
+                                    <!-- <%if(err_email){%>
+                                <div style="color: red;">
+                                    <%=err_email%>
+                                </div>
+
+                                <%}%> -->
+
+                                    <!-- <input type="text" placeholder="Phone Number*" name="mobile" required> -->
+                                    <label for="">Mobile Number*</label>
+                                    <input class="mbb" type="text" placeholder="01*********" name="mobile" pattern="\d{11}" title=": Please enter a valid 11-digit phone number" required>
+
+                                    <!-- <%if(err_mobile){%>
+                                <div style="color: red;">
+                                    <%=err_mobile%>
+                                </div> <br>
+                                <%}%>
+
+                                    <% if (err_mbl) { %>
+                                        <div style="color: red;">
+                                            <%= err_mobile %>
+                                        </div>
+                                        <% } %> -->
+                                </div>
+
+                                <div class="inputWithIcon">
+                                </div>
+
+                                <div class="mt-3">
+                                    <button class="inline-block" type="submit">SignUp</button>
+                                </div>
+
+
+                                <div class="text-center mt-4 visible_ch1 d-none" style="font-size: 14px;">Login With</div>
+
+                                <div class="login-with  mt-3 mb-0">
+                                    <span class="unvisible_ch1">Login With</span>
+
+                                    <span class="icon-holder">
+                                        <a href="/google"> <img src="/assets/images/auth/google.png" alt=""></a>
+                                    </span>
+
+                                    <span class="icon-holder">
+                                        <a href="/google"> <img src="/assets/images/auth/facebook.png" alt=""></a>
+                                    </span>
+                                    <!-- <span class="icon-holder">
+                                                <img src="/assets/images/auth/twitter.png" alt="">
+                                            </span> -->
+                                </div>
+
+
+                                <div class="text-center visible_ch1 d-none" style="font-size: 12px!important; margin-top: 40px!important;">
+                                    <div class="links">
+                                        <span>Already A User?</span>
+                                        <span><a href="/login" style="color:  #407BFF;"> <span style="font-weight: bolder;">Login</span></a></span>
+                                    </div>
+                                </div>
+
+                            </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
