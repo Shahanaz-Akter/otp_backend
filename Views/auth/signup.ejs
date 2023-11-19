@@ -14,6 +14,9 @@
         * {
             @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,400&display=swap');
             font-family: 'Poppins', sans-serif;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
         }
 
         a {
@@ -24,7 +27,7 @@
         .login-page {
             width: 100%;
             height: 100vh;
-            overflow: hiden;
+            overflow: scroll !important;
 
             display: inline-block;
             display: flex;
@@ -48,16 +51,16 @@
         /* /Don't forget to add Font Awesome CSS : "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/ */
         input[type="text"],
         input[type="email"] {
-            width: 50%;
-            border: 1px solid #A952A5;
-            border-radius: 4px;
+            background: #F5F5F5;
+            width: 100%;
+            border: 1px solid transparent;
+            /* border-radius: 6px; */
             margin: 8px 0;
             outline: none;
             padding: 8px;
             box-sizing: border-box;
             transition: 0.3s;
         }
-
 
         input[type="text"]:focus,
         input[type="email"]:focus {
@@ -96,17 +99,7 @@
             background-color: dodgerBlue;
         }
 
-        /* .signup-btn {
-            width: 500px;
-            padding: 1em 3em;
-            border-radius: 2em;
-            background: linear-gradient(to right, #56b8dd, #6e80e6, #8467e7, #b444ee, #e639f7, #c63bf0);
-            color: white;
-            font-size: 14px;
-        } */
-        /* .login-btn a:hover{
-            color: white;
-        } */
+
         .login-with img {
             width: 20px;
             height: auto;
@@ -145,11 +138,18 @@
             border: none;
         }
 
-        @media(max-width: 458px) {
-            .login-page {
-                /* align-items: flex-start; */
-                padding-top: 12px;
+        form input::placeholder {
+            font-size: 15px;
+            color: #999999;
+        }
 
+        .logo img {
+            height: 30px;
+        }
+
+        /* @media(max-width: 458px) {
+            .login-page {
+                padding-top: 12px;
             }
 
             .logo img {
@@ -164,36 +164,21 @@
                 width: 100% !important;
             }
 
-            /* margin: 5px auto !important; */
-            /* padding: 10px 15px !important; */
+          
 
             .header h2 {
                 margin-top: 34px !important;
                 margin-bottom: 21px !important;
             }
-        }
-
-
-
-
-        form input::placeholder {
-            font-size: 15px;
-            color: #999999;
-        }
-
-
-        .logo img {
-            height: 30px;
-            ;
-        }
+        }  */
 
         /* less than <=576 device  responsive screen size  */
-        /* width: 375px !important;
-        height: 812px !important; */
+        /* width: 375px !important;height: 707/812px !important; */
         @media(max-width: 375px) {
             .login-page {
                 background-image: none;
                 height: 707px !important;
+                /* overflow: scroll; */
             }
 
             .login-with {
@@ -205,15 +190,18 @@
                 display: none !important;
             }
 
-            .inputWithIcon {
+            /* .inputWithIcon 
+            {
                 display: block;
+            } */
+            .screen_100 {
+                width: 100%;
             }
-
 
             /* /Don't forget to add Font Awesome CSS : "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/ */
             input[type="text"],
             input[type="email"] {
-                width: 100% !important;
+                /* width: 100% !important; */
                 border: 1px solid transparent;
                 background-color: #F5F5F5;
                 border-radius: 10px;
@@ -233,9 +221,6 @@
                 margin-bottom: 21px !important;
                 /* margin-left: 26px !important; */
                 /* margin-right: 100px !important; */
-
-
-
                 color: #3D3D3D;
                 font-family: Poppins;
                 font-size: 26px;
@@ -263,8 +248,81 @@
             }
 
         }
-    </style>
 
+        @media(min-width: 376px) and (max-width: 834px) {
+
+
+            .login-page {
+                background: url('/assets/images/auth/bg1.png');
+
+                /* background-image: none; */
+                /* overflow: scroll; */
+            }
+
+            .login-with {
+                justify-content: center;
+                margin-bottom: 20px !important;
+            }
+
+            .ch1 {
+                display: none !important;
+            }
+
+
+
+            /* /Don't forget to add Font Awesome CSS : "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/ */
+            input[type="text"],
+            input[type="email"] {
+                width: 100% !important;
+                border: 1px solid transparent;
+                background-color: #F5F5F5;
+                border-radius: 10px;
+
+            }
+
+
+            .visible_ch1 {
+                display: block !important;
+                font-size: 16px !important;
+            }
+
+            .unvisible_ch1 {
+                display: none;
+            }
+
+            .container {
+                border: 2px solid transparent;
+                width: 834px !important;
+
+                /* margin-left: 20px !important;
+                margin-right: 20px !important; */
+                padding: 5px !important;
+            }
+
+            .mbb {
+                margin-bottom: 15px !important;
+            }
+        }
+
+        /* less than <=834 device  responsive screen size  */
+        /* width: 834px !important; height: 1194px !important; */
+    </style>
+    <style>
+        .parent_ {
+            position: relative;
+        }
+
+        @media (min-width: 1800px) and (max-width: 1920px) {
+
+            .child_ {
+                position: absolute;
+                left: 890px;
+                top: 30%;
+                height: 300px;
+                width: 1px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -290,140 +348,171 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12 ch1">
+            <div class="child_" style="background: #999999;">
+            </div>
+
+            <div class="row parent_">
+                <div class="d-flex justify-content-center align-items-center col-lg-6 col-xl-6 col-md-12 col-sm-12  ch1">
                     <img src="/assets/images/auth/signup.png" alt="" style="width: 100%;">
                 </div>
-                <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12 d-flex justify-content-center flex-column">
-                    <div class="header mb-3">
-                        <h2><b>Create Account!</b></h2>
-                        <span class="ch1" style="color: #808080	;
+
+
+                <!-- <div class="col-lg-1 col-xl-1 col-md-1 col-sm-12" style="background: black; height: 350px; width: 1px">
+                </div> -->
+
+                <form class="col-lg-6 col-xl-6 col-md-12 col-sm-12 d-flex justify-content-center align-items-center flex-column " method="POST" action="/sendOtp">
+                    <div class="">
+                        <div class="header mb-3 mt-5">
+                            <h2 class="mt-2"><b style="color: #000000">Create Account!</b></h2>
+                            <span class="ch1" style="color: #808080	;
                         ">Create an account by filling in info below.</span>
-                    </div>
-                    <!-- <%if(err_email){%>
-                        <div style="color: red;">
-                            <%=err_email%>
                         </div>
 
-                        <%}%> -->
-
-                    <%if(err_mobile){%>
-                        <div class="alert alert-danger text-center">
-                            <!-- {{ session('error') }} -->
-                            <div>
-                                <%= err_mobile %>
+                        <!-- Error Message swill show by this code -->
+                        <%if(err_email){%>
+                            <div class="alert alert-danger text-center" style="border-radius: 10px;">
+                                <%=err_email%>
                             </div>
-                        </div>
-                        <%}%>
+                            <%}%>
 
-                            <!-- 
-                            <% if (err_mbl) { %>
-                                <div style="color: red;">
-                                    <%= err_mobile %>
-                                </div>
-                                <% } %> -->
-
-
-                            <!-- @if (session('error'))
-                    <div style="color: red;">{{$message}}</div>
-                    @endif -->
-
-                            <form method="POST" action="/sendOtp" style="">
-                                <!-- @csrf -->
-                                <div class="inputWithIcon">
-                                    <!-- @error('first_name')
-                            <div style="color: red;">{{$message}}</div>
-                            @enderror -->
-                                    <label for="">First Name*</label>
-
-
-                                    <input class="me-3 mbb" type="text" placeholder="Shahahnaz Akter*" name="first_name" required>
-
-                                    <!-- @error('last_name')
-                            <div style="color: red;">{{$message}}</div>
-                            @enderror -->
-                                    <label for="">Last Name*</label>
-
-                                    <input class="mbb" type="text" placeholder="Mimi*" name="last_name" required>
-
-                                </div>
-
-                                <div class="inputWithIcon">
-                                    <!-- @error('user_name')
-                            <div style="color: red;">{{$message}}</div>
-                            @enderror -->
-                                    <!-- <input class="me-3" type="text" placeholder="User Name*" name="user_name"> -->
-
-                                    <!-- @error('email')
-                            <div style="color: red;">{{$message}}</div>
-                            @enderror -->
-
-                                    <label for="">Email*</label>
-
-                                    <input class="me-3 mbb" type="email" placeholder="xyz@gmail.com*" name="email">
-                                    <!-- <%if(err_email){%>
-                                <div style="color: red;">
-                                    <%=err_email%>
-                                </div>
-
-                                <%}%> -->
-
-                                    <!-- <input type="text" placeholder="Phone Number*" name="mobile" required> -->
-                                    <label for="">Mobile Number*</label>
-                                    <input class="mbb" type="text" placeholder="01*********" name="mobile" pattern="\d{11}" title=": Please enter a valid 11-digit phone number" required>
-
-                                    <!-- <%if(err_mobile){%>
-                                <div style="color: red;">
-                                    <%=err_mobile%>
-                                </div> <br>
-                                <%}%>
-
-                                    <% if (err_mbl) { %>
-                                        <div style="color: red;">
+                                <%if(err_mobile){%>
+                                    <div class="alert alert-danger text-center" style="border-radius: 10px;">
+                                        <!-- {{ session('error') }} -->
+                                        <div>
                                             <%= err_mobile %>
                                         </div>
-                                        <% } %> -->
-                                </div>
-
-                                <div class="inputWithIcon">
-                                </div>
-
-                                <div class="mt-3">
-                                    <button class="inline-block" type="submit">SignUp</button>
-                                </div>
-
-
-                                <div class="text-center mt-4 visible_ch1 d-none" style="font-size: 14px;">Login With</div>
-
-                                <div class="login-with  mt-3 mb-0">
-                                    <span class="unvisible_ch1">Login With</span>
-
-                                    <span class="icon-holder">
-                                        <a href="/google"> <img src="/assets/images/auth/google.png" alt=""></a>
-                                    </span>
-
-                                    <span class="icon-holder">
-                                        <a href="/google"> <img src="/assets/images/auth/facebook.png" alt=""></a>
-                                    </span>
-                                    <!-- <span class="icon-holder">
-                                                <img src="/assets/images/auth/twitter.png" alt="">
-                                            </span> -->
-                                </div>
-
-
-                                <div class="text-center visible_ch1 d-none" style="font-size: 12px!important; margin-top: 40px!important;">
-                                    <div class="links">
-                                        <span>Already A User?</span>
-                                        <span><a href="/login" style="color:  #407BFF;"> <span style="font-weight: bolder;">Login</span></a></span>
                                     </div>
-                                </div>
+                                    <%}%>
 
-                            </form>
+                                        <!-- shanto -->
+                                        <!-- <form method="POST" action="/sendOtp" style="">
+                                        <div class="inputWithIcon">
+                                            <label for="">First Name*</label>
+                                            <input class="me-3 mbb" type="text" placeholder="Enter Your First Name*" name="first_name" required>
 
-                </div>
+                                            <label for="">Last Name*</label>
+                                            <input class="mbb" type="text" placeholder="Enter Your Last Name" name="last_name" required>
+                                        </div>
+
+                                        <div class="inputWithIcon">
+                                            <label for="">Email*</label>
+                                            <input class="me-3 mbb" type="email" placeholder="xyz@gmail.com*" name="email">
+
+
+                                            <label for="">Mobile Number*</label>
+                                            <input class="mbb" type="text" placeholder="01*********" name="mobile" pattern="\d{11}" title=": Please enter a valid 11-digit phone number" required>
+
+                                        </div>
+
+                                        <div class="inputWithIcon">
+                                        </div>
+
+                                        <div class="mt-3">
+                                            <button class="inline-block" type="submit">SignUp</button>
+                                        </div>
+
+                                        <div class="text-center mt-4 visible_ch1 d-none" style="font-size: 14px;">Login With</div>
+
+                                        <div class="login-with  mt-3 mb-0">
+                                            <span class="unvisible_ch1">Login With</span>
+
+                                            <span class="icon-holder">
+                                                <a href="/google"> <img src="/assets/images/auth/google.png" alt=""></a>
+                                            </span>
+
+                                            <span class="icon-holder">
+                                                <a href="/google"> <img src="/assets/images/auth/facebook.png" alt=""></a>
+                                            </span>
+
+                                        </div>
+
+                                        <div class="text-center visible_ch1 d-none" style="font-size: 12px!important; margin-top: 40px!important;">
+                                            <div class="links">
+                                                <span>Already A User?</span>
+                                                <span><a href="/login" style="color:  #407BFF;"> <span style="">Login</span></a></span>
+                                            </div>
+                                        </div>
+
+                                    </form> -->
+
+                                        <!-- Mimi -->
+                                        <!-- <form method="POST" action="/sendOtp" style=""> -->
+
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                                                <label for="first_name" class="">First Name*</label>
+                                                <div class="">
+                                                    <input class="mbb" type="text" placeholder="First Name" name="first_name" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                                                <label for="last_name" class="">Last Name*</label>
+                                                <div class="">
+                                                    <input class="mbb" type="text" placeholder="Last Name" name="last_name" required>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                                                <label for="email">Email*</label>
+                                                <div class="">
+                                                    <input class="me-3 mbb" type="email" placeholder="xyz@gmail.com*" name="email" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                                <label for="">Mobile Number*</label>
+                                                <div class="">
+                                                    <input class="mbb" type="text" placeholder="01*********" name="mobile" pattern="\d{11}" title=": Please enter a valid 11-digit phone number" required>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-12">
+                                                <button class="inline-block" type="submit">SignUp</button>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- responsibe -->
+                                        <div class="text-center mt-4 visible_ch1 d-none" style="font-size: 14px; color: #000000;">Login With</div>
+
+                                        <div class="login-with  mb-0 d-flex justify-content-md-center justify-content-lg-end justify-content-center mt-2" style="margin-top: 0px;">
+                                            <div>
+                                                <span class="unvisible_ch1" style="color: #000000;">Login With</span>
+
+                                                <span class="icon-holder ms-2">
+                                                    <a href="/google"> <img src="/assets/images/auth/google.png" alt=""></a>
+                                                </span>
+
+                                                <span class="icon-holder ms-2">
+                                                    <a href="/google"> <img src="/assets/images/auth/facebook.png" alt=""></a>
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- responsibe -->
+                                        <div class="text-center visible_ch1 d-none" style="font-size: 16px!important; margin-top: 40px!important;">
+                                            <div class="links">
+                                                <span>Already A User?</span>
+                                                <span><a href="/login" style="color:  #87ACFF;"> <span style="">Login</span></a></span>
+                                            </div>
+                                        </div>
+                    </div>
+
+                </form>
             </div>
+
+
         </div>
     </div>
+
 </body>
 
 </html>
