@@ -162,7 +162,7 @@
 <body>
 
   <div class="login-page bg-light">
-    <div class="container bg-white pt-3 pb-3 pe-5 ps-5 " style="width:80%;min-height:430px;border-radius:10px;">
+    <div class="container bg-white ps-4 pt-4 pe-4 pb-0 " style="width:80%;min-height:430px;border-radius:10px;">
 
 
       <div class="d-flex align-items-center justify-content-between ch1">
@@ -190,9 +190,8 @@
           <img src='/assets/images/auth/otp.png' alt="" style="width:100%;height:auto;">
         </div>
         <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12 col-12 d-flex flex-column justify-content-center">
-          <div class=" header mb-3">
 
-
+          <div class="header mb-3">
             <!-- @if(session('error')) -->
             <%if(err){%>
               <div class="alert alert-danger text-center">
@@ -203,15 +202,16 @@
               </div>
               <!-- @endif -->
               <%}%>
-
-                <h2><b>OTP</b></h2>
-                <!-- <p class="text-center" style="color: #808080	;">A 4 digit Code has been sent to +8801*******36</p> -->
-                <p class="text-center" style="color: #808080	;">A 4 digit Code has been sent to <%=num%>
-                </p>
-
           </div>
 
           <form class="num_container" action="/postOtp/<%=id%>" method="post">
+
+
+
+            <h2><b>OTP</b></h2>
+            <!-- <p class="text-center" style="color: #808080	;">A 4 digit Code has been sent to +8801*******36</p> -->
+            <p class="text-center mb-4" style="color: #808080	;">A 4 digit Code has been sent to <%=num%>
+            </p>
 
             <div class="inputfield">
               <input type="number" maxlength="1" class="input" name="num1" disabled />

@@ -143,7 +143,7 @@ const otpView = async (req, res) => {
     // Extracting the last 3 digits
     const lastThreeDigits = user.mobile.substring(8, 11);
 
-    const num = "+88 " + firstTwoDigits + "****** " + lastThreeDigits;
+    const num = "+88" + firstTwoDigits + "****** " + lastThreeDigits;
 
     const err = req.query.err;
     res.render('auth/otp', { id, err, num });
@@ -215,7 +215,8 @@ const tobView = async (req, res) => {
 }
 
 const postTob = async (req, res) => {
-    const { business } = req.body;
+    const { business, company } = req.body;
+
     // const business=req.body.business; //two ways to get one data
     // console.log("post Tob view ", req.params.id);
     const single_rec = await User.findOne({ _id: req.params.id });//finding one single record from the database User table
@@ -223,7 +224,9 @@ const postTob = async (req, res) => {
 
     const updated_record = await User.findByIdAndUpdate(
         single_rec._id,
-        { $set: { type_of_business: business } },
+
+        { $set: { type_of_business: business, company_name: company } },
+
         { new: true }
     );
 

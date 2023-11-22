@@ -193,7 +193,7 @@
 
 
     <div class="login-page bg-light">
-        <div class="container bg-white pt-3 pb-3 pe-5 ps-5" style="width:70%;border-radius:10px; ;">
+        <div class="container bg-white  ps-4 pt-4 pe-4 pb-0" style="width:70%;border-radius:10px; ;">
 
 
             <div class="d-flex align-items-center justify-content-between ch1">
@@ -227,24 +227,29 @@
                 <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12 d-flex justify-content-center flex-column">
                     <div class="header mb-3">
                         <h2><b>Pin Generate</b></h2>
-                        <span style="color: #808080  ;
-                        ">Create Your Pin Number</span>
+                        <!-- <span style="color: #808080  ;
+                        ">Create Your Pin Number</span> -->
 
                     </div>
 
-                    <div class="my-3">
+
+                    <div class="row mb-3">
+                        <!-- <div class="my-3"> -->
+                        <label for="pin" class=""><b>Pin</b> </label>
+
                         <div class="first-example">
-                            <input type="password" id="password-field" placeholder="New Pin" name="new_pin" required>
+                            <input type="password" id="password-field" placeholder="******" name="new_pin" required>
                             <i id="pass-status" class="fa fa-eye" aria-hidden="true" onClick="viewPassword()"></i>
                         </div>
-
                     </div>
-                    <div class="">
+
+                    <div class="row mb-3">
+                        <!-- <div class="my-3"> -->
+                        <label for="=confirm_pin" class=""> <b> Confirm Pin</b></label>
                         <div class="first-example">
-                            <input type="password" id="password-field1" placeholder="Confirm Pin" name="confirm_pin" required>
+                            <input type="password" id="password-field1" placeholder="******" name="confirm_pin" required>
                             <i id="pass-status1" class="fa fa-eye" aria-hidden="true" onClick="viewPassword1()"></i>
                         </div>
-
                     </div>
 
                     <div class="btn-link mt-5 text-center">

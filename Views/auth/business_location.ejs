@@ -234,11 +234,11 @@
                     <!-- @csrf -->
                     <div class="header mb-3">
                         <h2><b>Business Location!</b></h2>
-                        <span style="color: #808080;">Enter Your Business Location.</span>
+                        <!-- <span style="color: #808080;">Enter Your Business Location.</span> -->
                     </div>
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-xl-6 ">
-                            <label for="language">District:</label>
+                            <label class="mb-2" for="district"><b> District</b></label>
                             <select id="single" class=" mt-3 me-4" style="width:100%;" name="district">
                                 <option value="">Select</option>
                                 <option value="Dhaka">Dhaka</option>
@@ -248,7 +248,7 @@
                             </select>
                         </div>
                         <div class="col-lg-6 col-md-6 col-xl-6">
-                            <label for="language">City:</label>
+                            <label class="mb-2" for="city"> <b> City</b></label>
                             <select id="city" class=" mt-3 me-5" style="width:100%;" name="city">
                                 <option value="">Select</option>
                                 <option value="Uttara">Uttara</option>
@@ -258,7 +258,7 @@
                             </select>
                         </div>
                         <div class="col-lg-6 col-md-6 col-xl-6 mt-3">
-                            <label for="language">Zip Code:</label>
+                            <label class="mb-2" for="zipcode"><b> Zip Code</b></label>
                             <select class="select3 mt-3 me-3" style="width:100%;" name="zipcode" id="zip">
                                 <option value="">Select</option>
                                 <option value="#">#</option>
@@ -269,7 +269,7 @@
                             </select>
                         </div>
                         <div class="col-lg-6 col-md-6 col-xl-6 mt-3">
-                            <label for="language">Road No:</label>
+                            <label class="mb-2" for="road"> <b> Road No</b></label>
                             <select class="select4 mt-3 me-3" style="width:100%;" name="road" id="road">
                                 <option value="">Select</option>
                                 <option value="1">1</option>
@@ -280,7 +280,7 @@
                             </select>
                         </div>
                         <div class="col-lg-6 col-md-6 col-xl-6 mt-3">
-                            <label for="language">House No:</label>
+                            <label class="mb-2" for="house"><b>House No</b></label>
                             <select class="select5 mt-3" style="width:100%;" name="house" id="house">
                                 <option value="">Select</option>
                                 <option value="1">1</option>
@@ -308,9 +308,6 @@
 
 
             </div>
-
-
-
 
         </div>
     </div>

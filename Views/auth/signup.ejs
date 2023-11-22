@@ -317,7 +317,7 @@
             .child_ {
                 position: absolute;
                 left: 890px;
-                top: 30%;
+                top: 32%;
                 height: 300px;
                 width: 1px;
             }
@@ -327,7 +327,7 @@
 
 <body>
     <div class="login-page bg-light" style="border: 1px solid transparent;">
-        <div class="container bg-white pt-3 pb-3 pe-5 ps-5 d-flex flex-column justify-content-between" style="width:100%!important; min-height:420px;border-radius:10px; ;">
+        <div class="container bg-white ps-4 pt-4 pe-4 pb-0 d-flex flex-column justify-content-between" style="width:100%!important; min-height:420px;border-radius:10px; ;">
             <div class="d-flex align-items-center justify-content-between ch1">
                 <div class="logo">
                     <svg width="39" height="40" viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -352,10 +352,9 @@
             </div>
 
             <div class="row parent_">
-                <div class="d-flex justify-content-center align-items-center col-lg-6 col-xl-6 col-md-12 col-sm-12  ch1">
+                <div class="d-flex justify-content-center align-items-center col-lg-6 col-xl-6 col-md-12 col-sm-12 ch1">
                     <img src="/assets/images/auth/signup.png" alt="" style="width: 100%;">
                 </div>
-
 
                 <!-- <div class="col-lg-1 col-xl-1 col-md-1 col-sm-12" style="background: black; height: 350px; width: 1px">
                 </div> -->
@@ -363,29 +362,29 @@
                 <form class="col-lg-6 col-xl-6 col-md-12 col-sm-12 d-flex justify-content-center align-items-center flex-column " method="POST" action="/sendOtp">
                     <div class="">
                         <div class="header mb-3">
-                            <h2 class="mt-2"><b style="color: #000000">Create Account!</b></h2>
-                            <span class="ch1" style="color: #808080	;
+                            <h2 class="mb-4"><b style="color: #000000">Create Account!</b></h2>
+                            <!-- <span class="ch1" style="color: #808080	;
                         ">Create an account by filling in info below.</span>
-                        </div>
+                        </div> -->
 
-                        <!-- Error Message swill show by this code -->
-                        <%if(err_email){%>
-                            <div class="alert alert-danger text-center" style="border-radius: 10px;">
-                                <%=err_email%>
-                            </div>
-                            <%}%>
+                            <!-- Error Message swill show by this code -->
+                            <%if(err_email){%>
+                                <div class="alert alert-danger text-center" style="border-radius: 10px;">
+                                    <%=err_email%>
+                                </div>
+                                <%}%>
 
-                                <%if(err_mobile){%>
-                                    <div class="alert alert-danger text-center" style="border-radius: 10px;">
-                                        <!-- {{ session('error') }} -->
-                                        <div>
-                                            <%= err_mobile %>
+                                    <%if(err_mobile){%>
+                                        <div class="alert alert-danger text-center" style="border-radius: 10px;">
+                                            <!-- {{ session('error') }} -->
+                                            <div>
+                                                <%= err_mobile %>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <%}%>
+                                        <%}%>
 
-                                        <!-- shanto -->
-                                        <!-- <form method="POST" action="/sendOtp" style="">
+                                            <!-- shanto -->
+                                            <!-- <form method="POST" action="/sendOtp" style="">
                                         <div class="inputWithIcon">
                                             <label for="">First Name*</label>
                                             <input class="me-3 mbb" type="text" placeholder="Enter Your First Name*" name="first_name" required>
@@ -435,77 +434,77 @@
 
                                     </form> -->
 
-                                        <!-- Mimi -->
-                                        <!-- <form method="POST" action="/sendOtp" style=""> -->
+                                            <!-- Mimi -->
+                                            <!-- <form method="POST" action="/sendOtp" style=""> -->
 
-                                        <div class="row">
-                                            <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                                                <label for="first_name" class="">First Name*</label>
-                                                <div class="">
-                                                    <input class="mbb" type="text" placeholder="First Name" name="first_name" required>
+                                            <div class="mb-5">
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                                                        <label for="first_name" class=""><b> First Name*</b></label>
+                                                        <div class="">
+                                                            <input class="mbb" type="text" placeholder="First Name" name="first_name" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                                                        <label for="last_name" class=""><b> Last Name*</b></label>
+                                                        <div class="">
+                                                            <input class="mbb" type="text" placeholder="Last Name" name="last_name" required>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                                                        <label for="email"> <b>Email*</b> </label>
+                                                        <div class="">
+                                                            <input class="me-3 mbb" type="email" placeholder="xyz@gmail.com*" name="email" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <label for=""> <b>Mobile Number*</b> </label>
+                                                        <div class="">
+                                                            <input class="mbb" type="text" placeholder="01*********" name="mobile" pattern="\d{11}" title=": Please enter a valid 11-digit phone number" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mt-2 mb-3">
+                                                    <div class="col-12">
+                                                        <button class="inline-block" type="submit">SignUp</button>
+                                                    </div>
                                                 </div>
                                             </div>
 
-                                            <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                                                <label for="last_name" class="">Last Name*</label>
-                                                <div class="">
-                                                    <input class="mbb" type="text" placeholder="Last Name" name="last_name" required>
+                                            <!-- responsibe -->
+                                            <div class="text-center mt-4 visible_ch1 d-none" style="font-size: 14px; color: #000000;">Login With</div>
+
+                                            <div class="login-with d-flex justify-content-md-center justify-content-lg-end justify-content-center">
+
+                                                <div>
+                                                    <span class="unvisible_ch1" style="color: #000000;">Login With</span>
+
+                                                    <span class="icon-holder ms-2">
+                                                        <a href="/google"> <img src="/assets/images/auth/google.png" alt=""></a>
+                                                    </span>
+
+                                                    <span class="icon-holder ms-2">
+                                                        <a href="/google"> <img src="/assets/images/auth/facebook.png" alt=""></a>
+                                                    </span>
+                                                </div>
+
+                                            </div>
+
+                                            <!-- responsibe -->
+                                            <div class="text-center visible_ch1 d-none" style="font-size: 16px!important; margin-top: 40px!important;">
+                                                <div class="links">
+                                                    <span>Already A User?</span>
+                                                    <span><a href="/login" style="color:  #87ACFF;"> <span style="">Login</span></a></span>
                                                 </div>
                                             </div>
-
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                                                <label for="email">Email*</label>
-                                                <div class="">
-                                                    <input class="me-3 mbb" type="email" placeholder="xyz@gmail.com*" name="email" required>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                                                <label for="">Mobile Number*</label>
-                                                <div class="">
-                                                    <input class="mbb" type="text" placeholder="01*********" name="mobile" pattern="\d{11}" title=": Please enter a valid 11-digit phone number" required>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="row mt-2 mb-3">
-                                            <div class="col-12">
-                                                <button class="inline-block" type="submit">SignUp</button>
-                                            </div>
-                                        </div>
-
-
-                                        <!-- responsibe -->
-                                        <div class="text-center mt-4 visible_ch1 d-none" style="font-size: 14px; color: #000000;">Login With</div>
-
-                                        <div class="login-with  mb-0 d-flex justify-content-md-center justify-content-lg-end justify-content-center mt-5" style="margin-top: 0px;">
-
-                                            <div>
-                                                <span class="unvisible_ch1" style="color: #000000;">Login With</span>
-
-                                                <span class="icon-holder ms-2">
-                                                    <a href="/google"> <img src="/assets/images/auth/google.png" alt=""></a>
-                                                </span>
-
-                                                <span class="icon-holder ms-2">
-                                                    <a href="/google"> <img src="/assets/images/auth/facebook.png" alt=""></a>
-                                                </span>
-                                            </div>
-
-                                        </div>
-
-                                        <!-- responsibe -->
-                                        <div class="text-center visible_ch1 d-none" style="font-size: 16px!important; margin-top: 40px!important;">
-                                            <div class="links">
-                                                <span>Already A User?</span>
-                                                <span><a href="/login" style="color:  #87ACFF;"> <span style="">Login</span></a></span>
-                                            </div>
-                                        </div>
-                    </div>
+                        </div>
 
                 </form>
             </div>

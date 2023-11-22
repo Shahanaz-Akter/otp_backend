@@ -56,6 +56,13 @@
             background: #F5F5F5;
         }
 
+        input[type="checkbox"] {
+            width: 17px;
+            height: 17px;
+            background-color: #F5F5F5 !important;
+
+        }
+
         input[type="text"]:focus {
             border-color: dodgerBlue;
             box-shadow: 0 0 8px 0 dodgerBlue;
@@ -187,7 +194,7 @@
 
 <body>
     <div class="login-page bg-light">
-        <div class="container bg-white pt-3 pb-3 pe-5 ps-5" style="width:80%;min-height:430px;border-radius:10px; ;">
+        <div class="container bg-white pt-4 pb-0 pe-4 ps-4" style="width:80%;min-height:430px;border-radius:10px; ;">
             <div class="d-flex align-items-center justify-content-between">
                 <div class="logo">
                     <svg width="39" height="40" viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -218,9 +225,9 @@
                     <img src="/assets/images/auth/login.png" alt="" style="width:100%;">
                 </div>
                 <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12 d-flex justify-content-center flex-column">
-                    <div class="header mb-3">
+                    <div class="header mt-5 mb-1">
                         <h2><b>Welcome Back</b></h2>
-                        <span>Login To Continue</span>
+                        <!-- <span>Login To Continue</span> -->
                     </div>
 
                     <!-- @if (session('error')) -->
@@ -235,17 +242,74 @@
                         <!-- @endif -->
                         <%}%>
 
-
                             <form method="POST" action="/post_login">
-                                <!-- @csrf -->
-                                <div class="inputWithIcon">
+
+                                <div class="row mb-2">
+
+                                    <div class="col-12 col-sm-7 col-md-12 col-lg-7">
+
+                                        <svg class="mb-1" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 16.0937C1 12.9474 3.62857 10.3968 9 10.3968C14.3714 10.3968 17 12.9474 17 16.0937C17 16.5942 16.6348 17 16.1843 17H1.81569C1.3652 17 1 16.5942 1 16.0937Z" stroke="black" stroke-width="2" />
+                                            <path d="M12 4C12 5.65685 10.6569 7 9 7C7.34314 7 6 5.65685 6 4C6 2.34315 7.34314 1 9 1C10.6569 1 12 2.34315 12 4Z" stroke="black" stroke-width="2" />
+                                        </svg>
+
+                                        <label for="mobile_num" class="ms-2 mb-2"><b>Email/Phone*</b></label>
+                                        <div class="">
+                                            <input class="" type="text" placeholder="Last Name" name="mobile_num" required>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="row mb-2">
+
+                                    <div class="col-12 col-sm-7 col-md-12 col-lg-7">
+                                        <div class="d-flex align-items-center">
+
+                                            <svg class="mb-2" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M2.5 6.33333V5.57143C2.5 3.039 4.50714 1 7 1C9.49286 1 11.5 3.039 11.5 5.57143V6.33333M2.5 6.33333C1.675 6.33333 1 7.01905 1 7.85714V15.4762C1 16.3143 1.675 17 2.5 17H11.5C12.325 17 13 16.3143 13 15.4762V7.85714C13 7.01905 12.325 6.33333 11.5 6.33333M2.5 6.33333H11.5M7 12.5V10.5"
+                                                    stroke="black" stroke-width="2" stroke-linecap="round" />
+                                            </svg>
+
+                                            <label class="ms-2 mb-2" for="mobile_num" class="mb-0"><b> Password</b></label>
+                                        </div>
+
+                                        <div class="">
+                                            <input type="text" placeholder="Enter Password" name="pass" required>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row mb-2">
+
+                                    <div class="col-12 col-sm-7 col-md-12 col-lg-7">
+
+                                        <span class="mt-5">
+                                            <input class="" type="checkbox" placeholder="Enter Password" name="pass" required>
+                                        </span>
+
+
+                                        <label for="mobile_num" class="ms-2"><b> Remember Me</b></label>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- <div class="inputWithIcon">
                                     <input type="text" placeholder="Enter Your Mobile Number" name="mobile_num">
                                     <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
                                 </div>
+
                                 <div class="inputWithIcon">
                                     <input type="text" placeholder="Enter Password" name="pass">
                                     <i class="fa-solid fa-lock"></i>
-                                </div>
+                                </div> -->
+
                                 <div class="buttons mt-5 ">
                                     <button type="submit" class="login-btn me-3">LOGIN</button>
                                     <a href="/forgotten_password"> Forget Password?</a>

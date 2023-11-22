@@ -46,6 +46,11 @@ const userSchema = mongoose.Schema({
 
     },
 
+    company_name: {
+        type: String,
+        // required: [true, 'Enter  your name value'],
+    },
+
     //location view
     district: {
         type: String,
