@@ -484,10 +484,15 @@ const resend = async (req, res) => {
     res.redirect(`/otp/${user._id}`);
 }
 
+
+const appointment_list = async (req, res) => {
+    res.render('auth/appointment_list');
+}
+
 module.exports = {
     signUp, sendOtp, otpView, postOtp, tobView, postTob, locationView, postLocation,
     pinView, postPin, dashboard, login, postLogin,
     forgottenPassword, postForgottenPassword, furtherOtp, postFurtherOtp, resetPin,
-    postResetPin, resend
+    postResetPin, resend, appointment_list
 }
 

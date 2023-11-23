@@ -2,10 +2,14 @@ const express = require('express');
 const router = express.Router();
 const { signUp, sendOtp, otpView, postOtp, tobView, postTob,
     locationView, postLocation, pinView, postPin, dashboard, login, postLogin,
-    forgottenPassword, postForgottenPassword, furtherOtp, postFurtherOtp, resetPin, postResetPin, resend } = require('../controllers/authController');
+    forgottenPassword, postForgottenPassword, furtherOtp, postFurtherOtp, resetPin, postResetPin, resend,appointment_list } = require('../controllers/authController');
 
 // if we have same route but different controller then we can alo use this way
 // router.route('/').get(getGoal).post(setGoal);
+
+
+
+
 
 // All routes are here
 router.get('/', signUp);
@@ -49,5 +53,6 @@ router.post('/post_resetpin/:id', postResetPin);
 
 router.get('/resend/:id', resend);
 
+router.get('/appointment_list', appointment_list);
 
 module.exports = router;

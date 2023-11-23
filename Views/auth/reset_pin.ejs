@@ -43,7 +43,7 @@
 
         input {
             width: 300px;
-            border-radius: 4px;
+            border-radius: 0.5rem;
             outline: none;
             padding: 8px;
             margin: 8px 0;
@@ -240,6 +240,7 @@
                 <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12">
                     <img src="/assets/images/auth/reset.png" alt="" style="width:100%;">
                 </div>
+
                 <form action="/post_resetpin/<%=id%>" method="post" class="col-lg-6 col-xl-6 col-md-6 col-sm-12 d-flex justify-content-center flex-column">
                     <div class="header mb-3">
                         <h2><b>Reset Pin</b></h2>
@@ -247,7 +248,7 @@
                         ">Create Your New Password</span> -->
                     </div>
 
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-12 col-sm-6 col-md-12 col-lg-12">
                             <label for="current_pin" class=""><b>Current Pin</b></label>
                             <div class="">
@@ -255,32 +256,24 @@
                                 <i id="pass-status" class="fa fa-eye" aria-hidden="true" onClick="viewPassword()"></i>
                             </div>
                         </div>
-
-                    </div>
+                    </div> -->
 
 
                     <div class="row">
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-12">
-                            <label for="pin" class=""><b>New Pin*</b></label>
-                            <div class="">
-                                <input type="password" id="password-field" placeholder="New Pin" name="pin" style="width:90%" required>
-                                <i id="pass-status" class="fa fa-eye" aria-hidden="true" onClick="viewPassword()"></i>
-                            </div>
+                        <label for="pin" class=""><b>New Pin</b></label>
+                        <div class="first-example">
+                            <input type="password" id="password-field" placeholder="New Pin" name="pin" style="width:90%" required>
+                            <i id="pass-status" class="fa fa-eye" aria-hidden="true" onClick="viewPassword()"></i>
                         </div>
-
                     </div>
 
                     <div class="row">
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-12">
-                            <label for="pin" class=""><b>Confirm Pin*</b></label>
-                            <div class="">
-                                <input type="password" id="password-field1" placeholder="Confirm Pin" name="confirm_pin" style="width:90%" required>
-                                <i id="pass-status1" class="fa fa-eye" aria-hidden="true" onClick="viewPassword1()"></i>
-                            </div>
+                        <label for="confirm_pin" class=""><b>Confirm Pin</b></label>
+                        <div class="first-example">
+                            <input type="password" id="password-field1" placeholder="Confirm Pin" name="confirm_pin" style="width:90%" required>
+                            <i id="pass-status1" class="fa fa-eye" aria-hidden="true" onClick="viewPassword1()"></i>
                         </div>
-
                     </div>
-
                     <!-- <div class="">
                         <div class="first-example">
                             <input type="password" id="password-field" placeholder="Current Pin" name="current_pin" style="width:90%" required>
@@ -318,15 +311,17 @@
                     </div>
                      -->
                     <!-- button -->
+
                     <div class="d-flex justify-content-center ">
                         <button class="mt-3 inline-block submit mb-4">
                             Reset Pin
                         </button>
                     </div>
 
-
                 </form>
+
             </div>
+
         </div>
     </div>
 
