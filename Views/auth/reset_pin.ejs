@@ -263,7 +263,7 @@
                         <label for="pin" class=""><b>New Pin</b></label>
                         <div class="first-example">
                             <input type="password" id="password-field" placeholder="New Pin" name="pin" style="width:90%" required>
-                            <i id="pass-status" class="fa fa-eye" aria-hidden="true" onClick="viewPassword()"></i>
+                            <i id="pass-status" class="fa fa-eye-slash" aria-hidden="true" onClick="viewPassword()"></i>
                         </div>
                     </div>
 
@@ -271,7 +271,7 @@
                         <label for="confirm_pin" class=""><b>Confirm Pin</b></label>
                         <div class="first-example">
                             <input type="password" id="password-field1" placeholder="Confirm Pin" name="confirm_pin" style="width:90%" required>
-                            <i id="pass-status1" class="fa fa-eye" aria-hidden="true" onClick="viewPassword1()"></i>
+                            <i id="pass-status1" class="fa fa-eye-slash" aria-hidden="true" onClick="viewPassword1()"></i>
                         </div>
                     </div>
                     <!-- <div class="">
@@ -280,7 +280,6 @@
                             <i id="pass-status" class="fa fa-eye" aria-hidden="true" onClick="viewPassword()"></i>
                         </div>
                     </div> -->
-
 
                     <!-- <div class="">
                         <div class="first-example">
@@ -296,7 +295,6 @@
                         </div>
 
                     </div> -->
-
 
                     <!-- <div class="">
                         <div class="first-example">
@@ -347,11 +345,11 @@
 
             if (passwordInput.type == 'password') {
                 passwordInput.type = 'text';
-                passStatus.className = 'fa fa-eye-slash';
+                passStatus.className = 'fa fa-eye';
 
             } else {
                 passwordInput.type = 'password';
-                passStatus.className = 'fa fa-eye';
+                passStatus.className = 'fa fa-eye-slash';
             }
         }
 
@@ -361,10 +359,10 @@
 
             if (passwordInput.type == 'password') {
                 passwordInput.type = 'text';
-                passStatus.className = 'fa fa-eye-slash';
+                passStatus.className = 'fa fa-eye';
             } else {
                 passwordInput.type = 'password';
-                passStatus.className = 'fa fa-eye';
+                passStatus.className = 'fa fa-eye-slash ';
             }
         }
     </script>

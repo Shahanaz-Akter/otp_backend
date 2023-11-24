@@ -43,7 +43,8 @@
         }
 
         /*Don't forget to add Font Awesome CSS : "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"*/
-        input[type="text"] {
+        input[type="text"],
+        input[type="password"] {
             width: 100%;
             /* border: 1px solid #A952A5; */
             border-radius: 4px;
@@ -56,12 +57,12 @@
             background: #F5F5F5;
         }
 
-        input[type="checkbox"] {
-            width: 17px;
-            height: 17px;
+        /* input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
             background-color: #F5F5F5 !important;
 
-        }
+        } */
 
         input[type="text"]:focus {
             border-color: dodgerBlue;
@@ -190,6 +191,47 @@
         }
     </style>
 
+    <style>
+        .checkbox_label {
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .vh {
+            position: absolute !important;
+            clip: rect(1px, 1px, 1px, 1px);
+            padding: 0 !important;
+            border: 0 !important;
+            height: 1px !important;
+            width: 1px !important;
+            overflow: hidden;
+        }
+
+        .checkbox_label:before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: #f5f5f5;
+            /* border: 0px solid rgba(75, 101, 132, 0.3); */
+            display: inline-block;
+            margin-right: 16px;
+            border-radius: 0.2rem;
+
+        }
+
+        /*  Change the styling of the :before when the hidden checkbox is checked, you also can add a background-image  */
+
+        input[type="checkbox"]:checked~label:before {
+            background: dodgerblue no-repeat center;
+            background-size: 12px 12px;
+            background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDQ1LjcwMSA0NS43IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NS43MDEgNDUuNzsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0yMC42ODcsMzguMzMyYy0yLjA3MiwyLjA3Mi01LjQzNCwyLjA3Mi03LjUwNSwwTDEuNTU0LDI2LjcwNGMtMi4wNzItMi4wNzEtMi4wNzItNS40MzMsMC03LjUwNCAgICBjMi4wNzEtMi4wNzIsNS40MzMtMi4wNzIsNy41MDUsMGw2LjkyOCw2LjkyN2MwLjUyMywwLjUyMiwxLjM3MiwwLjUyMiwxLjg5NiwwTDM2LjY0Miw3LjM2OGMyLjA3MS0yLjA3Miw1LjQzMy0yLjA3Miw3LjUwNSwwICAgIGMwLjk5NSwwLjk5NSwxLjU1NCwyLjM0NSwxLjU1NCwzLjc1MmMwLDEuNDA3LTAuNTU5LDIuNzU3LTEuNTU0LDMuNzUyTDIwLjY4NywzOC4zMzJ6IiBmaWxsPSIjRkZGRkZGIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+        }
+
+        /*  Show when label and checkbox have focus, to make this keyboard accessible > press spacebar to select the checkbox */
+    </style>
+
 </head>
 
 <body>
@@ -246,16 +288,16 @@
 
                                 <div class="row mb-2">
 
-                                    <div class="col-12 col-sm-7 col-md-12 col-lg-7">
+                                    <div class="col-12 col-sm-8 col-md-12 col-lg-8">
 
-                                        <svg class="mb-1" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg class="mb-1" width="17" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1 16.0937C1 12.9474 3.62857 10.3968 9 10.3968C14.3714 10.3968 17 12.9474 17 16.0937C17 16.5942 16.6348 17 16.1843 17H1.81569C1.3652 17 1 16.5942 1 16.0937Z" stroke="black" stroke-width="2" />
                                             <path d="M12 4C12 5.65685 10.6569 7 9 7C7.34314 7 6 5.65685 6 4C6 2.34315 7.34314 1 9 1C10.6569 1 12 2.34315 12 4Z" stroke="black" stroke-width="2" />
                                         </svg>
 
-                                        <label for="mobile_num" class="ms-1 mb-2"><b>Email/Phone*</b></label>
+                                        <label for="mobile_num" class="ms-1 mb-2"><b>Email / Phone*</b></label>
                                         <div class="">
-                                            <input class="" type="text" placeholder="Last Name" name="mobile_num" required>
+                                            <input class="" type="text" placeholder="xyx@email.com" name="mobile_num" required>
                                         </div>
 
                                     </div>
@@ -264,8 +306,8 @@
 
                                 <div class="row mb-2">
 
-                                    <div class="col-12 col-sm-7 col-md-12 col-lg-7">
-                                        <div class="d-flex align-items-center">
+                                    <div class="col-12 col-sm-8 col-md-12 col-lg-8">
+                                        <div class="">
                                             <svg class="mb-2" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.5 6.33333V5.57143C2.5 3.039 4.50714 1 7 1C9.49286 1 11.5 3.039 11.5 5.57143V6.33333M2.5 6.33333C1.675 6.33333 1 7.01905 1 7.85714V15.4762C1 16.3143 1.675 17 2.5 17H11.5C12.325 17 13 16.3143 13 15.4762V7.85714C13 7.01905 12.325 6.33333 11.5 6.33333M2.5 6.33333H11.5M7 12.5V10.5"
@@ -274,43 +316,35 @@
                                             <label class="ms-2 mb-2" for="mobile_num" class="mb-0"><b> Password</b></label>
                                         </div>
 
-                                        <div class="">
-                                            <input type="text" placeholder="Enter Password" name="pass" required>
+                                        <div class="d-flex" style="position:relative;">
+                                            <input id="password-field1" type="password" value="**********" placeholder="" name="pass" required>
+                                            <span style="position: absolute; top: 17px; right:15px;"> <i id="pass-status1" class="fa fa-eye-slash" aria-hidden="true" onClick="viewPassword1()"></i></span>
                                         </div>
                                     </div>
 
                                 </div>
 
+
+
+
+
                                 <div class="row mb-2">
 
                                     <div class="col-12 col-sm-7 col-md-12 col-lg-7">
 
-                                        <span class="mt-5">
-                                            <input class="" type="checkbox" placeholder="Enter Password" name="pass" required>
-                                        </span>
-
-                                        <label for="mobile_num" class="ms-2"><b> Remember Me</b></label>
+                                        <input type="checkbox" id="box" class="vh" name="pass" required>
+                                        <label class="checkbox_label" for="box">Remember Me</label>
 
                                     </div>
 
                                 </div>
 
 
-
-                                <!-- <div class="inputWithIcon">
-                                    <input type="text" placeholder="Enter Your Mobile Number" name="mobile_num">
-                                    <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
-                                </div>
-
-                                <div class="inputWithIcon">
-                                    <input type="text" placeholder="Enter Password" name="pass">
-                                    <i class="fa-solid fa-lock"></i>
-                                </div> -->
-
-                                <div class="buttons mt-5 ">
+                                <div class="buttons mt-4">
                                     <button type="submit" class="login-btn me-3">LOGIN</button>
                                     <a href="/forgotten_password"> Forget Password?</a>
                                 </div>
+
                                 <div class="d-flex justify-content-end login-with mt-5">
                                     <span>Login With</span>
                                     <span class="icon-holder">
@@ -327,6 +361,25 @@
             </div>
         </div>
     </div>
+
+
+    <script>
+        function viewPassword1() {
+            var passwordInput = document.getElementById('password-field1');
+            var passStatus = document.getElementById('pass-status1');
+
+            if (passwordInput.type == 'password') {
+                passwordInput.type = 'text';
+                passStatus.className = 'fa fa-eye';
+
+            } else {
+                passwordInput.type = 'password';
+                passStatus.className = 'fa fa-eye-slash ';
+            }
+        }
+    </script>
+
+
 </body>
 
 </html>

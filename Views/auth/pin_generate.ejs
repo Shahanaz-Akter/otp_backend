@@ -181,7 +181,7 @@
             .child_ {
                 position: absolute;
                 left: 890px;
-                top: 35%;
+                top: 30%;
                 height: 300px;
                 width: 1px;
             }
@@ -221,7 +221,6 @@
                 <!-- @csrf -->
                 <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12">
                     <img src="/assets/images/auth/pin.png" alt="" style="width:100%;">
-
                 </div>
 
                 <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12 d-flex justify-content-center flex-column">
@@ -229,7 +228,6 @@
                         <h2><b>Pin Generate</b></h2>
                         <!-- <span style="color: #808080  ;
                         ">Create Your Pin Number</span> -->
-
                     </div>
 
 
@@ -238,21 +236,21 @@
                         <label for="pin" class=""><b>Pin</b> </label>
 
                         <div class="first-example">
-                            <input type="password" id="password-field" placeholder="******" name="new_pin" required>
-                            <i id="pass-status" class="fa fa-eye" aria-hidden="true" onClick="viewPassword()"></i>
+                            <input type="password" id="password-field" placeholder="*************" name="new_pin" required>
+                            <i id="pass-status" class="fa fa-eye-slash" aria-hidden="true" onClick="viewPassword()"></i>
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <!-- <div class="my-3"> -->
-                        <label for="=confirm_pin" class=""> <b> Confirm Pin</b></label>
+                        <label for="confirm_pin" class=""> <b> Confirm Pin</b></label>
                         <div class="first-example">
-                            <input type="password" id="password-field1" placeholder="******" name="confirm_pin" required>
-                            <i id="pass-status1" class="fa fa-eye" aria-hidden="true" onClick="viewPassword1()"></i>
+                            <input type="password" id="password-field1" placeholder="*************" name="confirm_pin" required>
+                            <i id="pass-status1" class="fa fa-eye-slash" aria-hidden="true" onClick="viewPassword1()"></i>
                         </div>
                     </div>
 
-                    <div class="btn-link mt-5 text-center">
+                    <div class="btn-link mt-4 text-center">
                         <button class="button mb-4" href="">Continue</button>
                     </div>
 
@@ -269,11 +267,11 @@
 
             if (passwordInput.type == 'password') {
                 passwordInput.type = 'text';
-                passStatus.className = 'fa fa-eye-slash';
+                passStatus.className = 'fa fa-eye ';
 
             } else {
                 passwordInput.type = 'password';
-                passStatus.className = 'fa fa-eye';
+                passStatus.className = 'fa fa-eye-slash';
             }
         }
 
@@ -283,11 +281,11 @@
 
             if (passwordInput.type == 'password') {
                 passwordInput.type = 'text';
-                passStatus.className = 'fa fa-eye-slash';
+                passStatus.className = 'fa fa-eye';
 
             } else {
                 passwordInput.type = 'password';
-                passStatus.className = 'fa fa-eye';
+                passStatus.className = 'fa fa-eye-slash ';
             }
         }
     </script>
