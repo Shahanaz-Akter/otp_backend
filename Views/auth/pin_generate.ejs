@@ -41,7 +41,7 @@
         }
 
         input {
-            width: 90%;
+            width: 95%;
             border-radius: 4px;
             outline: none;
             padding: 8px;
@@ -58,9 +58,6 @@
             margin-left: -31px;
             color: gray;
         }
-
-
-
 
         input[type="password"]:focus {
             border-color: dodgerBlue;
@@ -134,41 +131,13 @@
 
         }
 
-        @media(max-width: 458px) {
-            .login-page {
-                align-items: flex-start;
-                padding-top: 12px;
-                ;
-            }
-
-            .logo img {
-                height: 28px;
-                ;
-            }
-
-            .links span:nth-child(1) {
-                font-size: 15px;
-                ;
-            }
-
-            .container {
-                width: 92% !important;
-                margin: 5px auto !important;
-                padding: 10px 15px !important;
-            }
-
-            .btn-link {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-        }
-
-
         form input::placeholder {
             font-size: 15px;
             color: #999999;
+        }
+
+        ::placeholder {
+            color: black !important;
         }
     </style>
     <style>
@@ -181,22 +150,76 @@
             .child_ {
                 position: absolute;
                 left: 890px;
-                top: 30%;
+                top: 32%;
                 height: 300px;
                 width: 1px;
             }
         }
     </style>
+
+    <style>
+        /* extra small device */
+        @media(max-width: 450px) {
+
+
+            .button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100% !important;
+            }
+
+            .Esmall_device {
+                display: none !important;
+            }
+
+            .bg_whitee {
+                background: #F8F9FA !important;
+            }
+
+            .login-page {
+                align-items: center;
+                padding-top: 12px;
+                background: none;
+
+            }
+
+            .logo img {
+                height: 28px;
+
+            }
+
+            .links span:nth-child(1) {
+                font-size: 15px;
+
+            }
+
+            .container {
+                width: 90% !important;
+                margin: 5px auto !important;
+                padding: 15px !important;
+            }
+
+            .btn-link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+        }
+    </style>
+
+
 </head>
 
 <body>
 
 
     <div class="login-page bg-light">
-        <div class="container bg-white  ps-4 pt-4 pe-4 pb-0" style="width:70%;border-radius:10px; ;">
+        <div class="container bg-white  bg_whitee ps-4 pt-4 pe-4 pb-0" style="width:70%;border-radius:10px; ;">
 
 
-            <div class="d-flex align-items-center justify-content-between ch1">
+            <div class="d-flex align-items-center justify-content-between Esmall_device ch1">
                 <div class="logo">
                     <svg width="39" height="40" viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="39" height="40" rx="6" fill="#2871FF" />
@@ -236,7 +259,7 @@
                         <label for="pin" class=""><b>Pin</b> </label>
 
                         <div class="first-example">
-                            <input type="password" id="password-field" placeholder="*************" name="new_pin" required>
+                            <input type="password" id="password-field" placeholder="*************" name="new_pin" required style="">
                             <i id="pass-status" class="fa fa-eye-slash" aria-hidden="true" onClick="viewPassword()"></i>
                         </div>
                     </div>

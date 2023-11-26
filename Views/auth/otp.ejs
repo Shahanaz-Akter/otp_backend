@@ -23,11 +23,12 @@
 
 
     .login-page {
-      width: 100%;
+      width: 100vw;
       height: 100vh;
       display: inline-block;
       display: flex;
       align-items: center;
+      justify-content: center;
       background: url('/assets/images/auth/bg.png');
       background-size: cover;
       background-position: left center;
@@ -39,7 +40,7 @@
 
     }
 
-    @media(max-width: 458px) {
+    /* @media(max-width: 458px) {
       .login-page {
         align-items: flex-start;
         padding-top: 12px;
@@ -57,15 +58,16 @@
       }
 
       .num_container {
-        width: 92% !important;
+        border: 1px solid red;
+        width: 100% !important;
         margin: 5px auto !important;
-        padding: 10px 15px !important;
+        padding: 10px 10px !important;
       }
 
       .header {
         text-align: center;
       }
-    }
+    } */
 
     form input::placeholder {
       font-size: 15px;
@@ -80,7 +82,6 @@
     }
 
     .input {
-
       height: 3em;
       width: 3em;
       border: 2px solid #dad9df;
@@ -159,16 +160,73 @@
     }
   </style>
 
+  <!-- extra small screen -->
+  <style>
+    @media(max-width:450px) {
+
+      .Esmall_device {
+        display: none;
+      }
+
+      .login-page {
+        width: 100vw !important;
+        height: 100vh;
+        display: inline-block;
+        display: flex;
+        align-items: center;
+        background: none;
+      }
+
+
+
+      .bg_whitee {
+        background: #F8F9FA !important;
+      }
+
+      .input {
+        height: 2.5em;
+        width: 2.5em;
+        border: 2px solid #dad9df;
+        margin-right: 7px;
+      }
+
+      .input1 {
+        margin-left: 7px;
+      }
+
+      #submit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* text-align: center; */
+        width: 100% !important;
+        /* padding: 2em 5em; */
+        border-radius: 0.5em;
+        background: linear-gradient(to right, #56b8dd, #6e80e6, #8467e7, #b444ee, #e639f7, #c63bf0);
+        color: white;
+        margin: 1em auto 0 auto;
+        font-size: 14px;
+        cursor: pointer;
+        border: none;
+      }
+    }
+
+
+    ::placeholder {
+      color: black !important;
+      font-weight: 900;
+    }
+  </style>
+
 </head>
 
 <body>
 
   <div class="login-page bg-light">
-    <div class="container bg-white ps-4 pt-4 pe-4 pb-0 " style="width:80%;min-height:430px;border-radius:10px;">
+    <div class="container bg-white  ps-4 pt-4 pb-4 pe-4 bg_whitee containerr" style="width:90%;min-height:430px;border-radius:10px;">
 
-
-      <div class="d-flex align-items-center justify-content-between ch1">
-        <div class="logo">
+      <div class="d-flex justify-content-between Esmall_device ch1">
+        <div class="logo ">
           <svg width="39" height="40" viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="39" height="40" rx="6" fill="#2871FF" />
             <path
@@ -187,7 +245,7 @@
       <div class="child_" style="background: #999999;">
       </div>
 
-      <div class="row parent_ p-4" style="height:100%;">
+      <div class="row parent_" style="height:100%;">
         <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12 col-12 d-flex align-items-center justify-content-center">
           <img src='/assets/images/auth/otp.png' alt="" style="width:100%;height:auto;">
         </div>
@@ -208,26 +266,27 @@
 
           <form class="num_container" action="/postOtp/<%=id%>" method="post">
 
-
-
             <h2><b>OTP</b></h2>
             <!-- <p class="text-center" style="color: #808080	;">A 4 digit Code has been sent to +8801*******36</p> -->
             <p class="text-center mb-4" style="color: #808080	;">A 4 digit Code has been sent to <%=num%>
             </p>
 
             <div class="inputfield">
-              <input type="number" maxlength="1" class="input" name="num1" disabled />
-              <input type="number" maxlength="1" class="input" name="num2" disabled />
-              <input type="number" maxlength="1" class="input" name="num3" disabled />
-              <input type="number" maxlength="1" class="input" name="num4" disabled />
+              <input type="number" maxlength="1" class="input input1" name="num1" placeholder="*" />
+              <input type="number" maxlength="1" class="input" name="num2" placeholder="*" disabled />
+              <input type="number" maxlength="1" class="input" name="num3" placeholder="*" disabled />
+              <input type="number" maxlength="1" class="input" name="num4" placeholder="*" disabled />
             </div>
+
             <input type="text" name="otp" id="otp" style="display:none;">
 
             <div class="text-center my-4">
               <p>Didn't receive the code? <span style="color: #6499FF;;"> <a href="/resend/<%=id%>" style="text-decoration: none;"><b>RESEND</b></a> </span></p>
             </div>
 
-            <button class="hide mt-5" type="submit" id="submit" onclick="popup_msg()">Verify</button>
+            <div class="mt-5">
+              <button class="hide" type="submit" id="submit" onclick="popup_msg()">Verify</button>
+            </div>
 
           </form>
 
