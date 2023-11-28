@@ -146,7 +146,7 @@
         }
 
 
-        @media(max-width: 575px) {
+        @media(max-width: 540px) {
             .login-page {
                 background-image: none;
                 height: auto !important;
@@ -203,6 +203,9 @@
                 width: 375px !important;
                 height: 707px !important;
 
+                /* margin-top: 20px !important;
+                margin-bottom: 20px !important; */
+
                 margin-left: 20px !important;
                 margin-right: 20px !important;
                 padding: 5px !important;
@@ -214,7 +217,13 @@
 
         }
 
-        @media(min-width: 576px) and (max-width: 992px) {
+        @media(min-width: 541px) and (max-width: 575px) {
+            .container {
+                margin-top: 60px !important;
+            }
+        }
+
+        /* @media(min-width: 576px) and (max-width: 992px) {
 
             .login-page {
                 background: url('/assets/images/auth/bg1.png');
@@ -259,7 +268,7 @@
             .mbb {
                 margin-bottom: 15px !important;
             }
-        }
+        }  */
     </style>
     <style>
         .parent_ {
@@ -307,14 +316,14 @@
 
             <div class="row parent_">
 
-                <div class="col-md-12 col-lg-6 col-xl-6 d-flex justify-content-center align-items-center ch1">
+                <div class="col-md-6 col-lg-6 col-xl-6 d-flex justify-content-center align-items-center ch1">
                     <img src="/assets/images/auth/signup.png" alt="" style="width: 100%;">
                 </div>
 
                 <!-- <div class="col-lg-1 col-xl-1 col-md-1 col-sm-12" style="background: black; height: 350px; width: 1px">
                 </div> -->
 
-                <form class="col-md-12 col-lg-6 col-xl-6 d-flex justify-content-center align-items-center flex-column " method="POST" action="/sendOtp">
+                <form class="col-md-6 col-lg-6 col-xl-6 d-flex justify-content-center align-items-center flex-column " method="POST" action="/sendOtp">
                     <div class="">
                         <div class="header mb-3">
                             <h2 class="mb-4"><b style="color: #000000">Create Account!</b></h2>
@@ -392,16 +401,17 @@
                                             <!-- Mimi -->
                                             <!-- <form method="POST" action="/sendOtp" style=""> -->
 
-                                            <div class="mb-5">
+                                            <div class="mb-2">
+
                                                 <div class="row">
-                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                                                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                         <label for="first_name" class=""><b> First Name*</b></label>
                                                         <div class="">
                                                             <input class="mbb" type="text" placeholder="First Name" name="first_name" required>
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                                                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                         <label for="last_name" class=""><b> Last Name*</b></label>
                                                         <div class="">
                                                             <input class="mbb" type="text" placeholder="Last Name" name="last_name" required>
@@ -411,14 +421,14 @@
                                                 </div>
 
                                                 <div class="row">
-                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                                    <div class="col-sm-6 col-md-6 col-lg-6">
                                                         <label for="email"> <b>Email*</b> </label>
                                                         <div class="">
                                                             <input class="me-3 mbb" type="email" placeholder="xyz@email.com*" name="email" required>
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                                    <div class="col-sm-6 col-md-6 col-lg-6">
                                                         <label for=""> <b>Mobile Number*</b> </label>
                                                         <div class="">
                                                             <input class="mbb" type="text" placeholder="01*********" name="mobile" pattern="\d{11}" title=": Please enter a valid 11-digit phone number" required>
@@ -434,7 +444,7 @@
                                             </div>
 
                                             <!-- responsibe -->
-                                            <div class="text-center mt-4 visible_ch1 d-none" style="font-size: 14px; color: #000000;">Login With</div>
+                                            <div class="mb-3 text-center mt-4 visible_ch1 d-none" style="font-size: 14px; color: #000000;">Login With</div>
 
                                             <div class="login-with d-flex justify-content-md-center justify-content-lg-end justify-content-center">
 

@@ -51,14 +51,10 @@
 
         }
 
-
-
         /* /Don't forget to add Font Awesome CSS : "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/ */
-
         .login-with img {
             width: 20px;
             height: auto;
-
         }
 
         .login-with {
@@ -81,24 +77,12 @@
             align-items: center;
         }
 
-        .button {
-            text-align: center;
-            display: inline-block;
-            width: 50%;
-            padding: 1em 3em;
-            border-radius: 0.5em;
-            background: linear-gradient(to right, #56b8dd, #6e80e6, #8467e7, #b444ee, #e639f7, #c63bf0);
-            color: white;
-            font-size: 14px;
-            border: none;
-        }
+
 
         form input::placeholder {
             font-size: 15px;
             color: #999999;
         }
-
-
 
         select {
             font-size: medium;
@@ -106,7 +90,6 @@
             /* border: 2px solid black; */
             padding: 100px 5px;
             border-radius: 5px;
-
 
         }
 
@@ -126,23 +109,35 @@
         .select2-container--default .select2-selection--single .select2-selection__arrow {
             top: 6px !important;
         }
-    </style>
-    <style>
-        .parent_ {
-            position: relative;
+
+
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* width: 48%; */
+            padding: 1em 3em;
+            border-radius: 0.5em;
+            background: linear-gradient(to right, #56b8dd, #6e80e6, #8467e7, #b444ee, #e639f7, #c63bf0);
+            color: white;
+            font-size: 14px;
+            border: none;
         }
 
-        @media (min-width: 1800px) and (max-width: 1920px) {
 
-            .child_ {
-                position: absolute;
-                left: 890px;
-                top: 32%;
-                height: 300px;
-                width: 1px;
-            }
+        .button1 {
+            text-align: center;
+            display: inline-block;
+            /* width: 48%; */
+            padding: 1em 3em;
+            border-radius: 0.5em;
+            background: grey;
+            color: white;
+            font-size: 14px;
+            border: none;
         }
     </style>
+
 
     <style>
         @media(max-width: 450px) {
@@ -160,6 +155,20 @@
                 border: none;
             }
 
+            .button1 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding: 1em 3em;
+                border-radius: 0.5em;
+                color: white;
+                font-size: 14px;
+                border: none;
+            }
+
+
+
             .bg-whitee {
                 background: #F8F9FA !important;
             }
@@ -171,7 +180,7 @@
 
             .login-page {
                 background: none;
-                padding: 20px;
+                /* padding: 20px; */
                 width: 100vw;
                 /* height: 100vh; */
                 /* padding-top: 250px; */
@@ -187,10 +196,10 @@
                 }
 
                 .container {
-                    width: 92% !important;
-                    height: 100%;
-                    margin: 5px auto !important;
-                    padding: 10px 15px !important;
+                    width: 100% !important;
+                    /* height: 100%; */
+                    /* margin: 5px auto !important;
+                    padding: 10px 15px !important; */
                 }
 
                 .select1,
@@ -215,21 +224,88 @@
                     border-radius: 5px;
                 }
 
-                .btn-link {
+                /* .btn-link {
                     display: flex;
                     align-items: center;
-                    justify-content: center;
+                    justify-content: between;
+                } */
+
+                .container {
+                    margin-top: 100px !important;
                 }
 
-
-
             }
+
+
+        }
+
+        /* @media(max-width:576px) {
+
+            .container {
+                margin-top: 100px !important;
+            }
+
+        } */
+
+        @media(max-width:767px) {
+            .Esmall_device {
+                display: none !important;
+            }
+
+            .container {
+                margin-top: 150px !important;
+            }
+
+            .button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding: 1em 3em;
+                border-radius: 0.5em;
+                background: linear-gradient(to right, #56b8dd, #6e80e6, #8467e7, #b444ee, #e639f7, #c63bf0);
+                color: white;
+                font-size: 14px;
+                border: none;
+            }
+
+            .button1 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding: 1em 3em;
+                border-radius: 0.5em;
+                color: white;
+                font-size: 14px;
+                border: none;
+            }
+
+
+        }
+    </style>
+
+    <style>
+        .parent_ {
+            position: relative;
+        }
+
+        @media (min-width: 1800px) and (max-width: 1920px) {
+
+            .child_ {
+                position: absolute;
+                left: 890px;
+                top: 32%;
+                height: 300px;
+                width: 1px;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="login-page bg-light ">
-        <div class="container bg-white bg-whitee  pt-3 pb-5 pe-3 ps-3 mt-5" style="width:80%;min-height:380px;border-radius:10px; ;">
+        <div class="container bg-white bg-whitee  pt-3 pb-5 pe-3 ps-3 mt-5" style="min-height:380px;border-radius:10px; ;">
 
             <div class="d-flex align-items-center justify-content-between ch1 Esmall_device">
                 <div class="logo">
@@ -255,18 +331,19 @@
 
 
             <div class="row">
-                <div class="col-md-12 col-sm-12 col-12 col-lg-6 col-xl-6  d-flex justify-content-center align-items-center">
+                <div class="col-12 col-md-6 col-sm-12 col-12 col-lg-6 col-xl-6  d-flex justify-content-center align-items-center">
                     <img src="/assets/images/auth/location.png" alt="" style="width: 100%;">
                 </div>
 
-                <form action="/post_location/<%=id%>" method="post" class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
-                    <!-- @csrf -->
-                    <div class="header mt-5 mb-3">
+                <form class="col-12 col-lg-6 col-xl-6 col-md-6 col-sm-12" action="/post_location/<%=id%>" method="post">
+
+                    <div class="header mt-5 mb-0">
                         <h2><b>Business Location!</b></h2>
                         <!-- <span style="color: #808080;">Enter Your Business Location.</span> -->
                     </div>
+
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 col-xl-6 ">
+                        <div class="col-sm-6 col-lg-6 col-md-6 col-xl-6 ">
                             <label class="mb-2" for="district"><b> District</b></label>
                             <select id="single" class=" mt-3 me-4" style="width:100%;" name="district">
                                 <option value="">Select</option>
@@ -276,7 +353,7 @@
                                 <option value="Gazipur">Gazipur</option>
                             </select>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-xl-6">
+                        <div class="col-sm-6 col-lg-6 col-md-6 col-xl-6">
                             <label class="mb-2" for="city"> <b> City</b></label>
                             <select id="city" class=" mt-3 me-5" style="width:100%;" name="city">
                                 <option value="">Select</option>
@@ -286,7 +363,7 @@
                                 <option value="Jatrabari">Jatrabari</option>
                             </select>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-xl-6 mt-3">
+                        <div class="col-sm-6 col-lg-6 col-md-6 col-xl-6 mt-3">
                             <label class="mb-2" for="zipcode"><b> Zip Code</b></label>
                             <select class="select3 mt-3 me-3" style="width:100%;" name="zipcode" id="zip">
                                 <option value="">Select</option>
@@ -297,7 +374,7 @@
                                 <option value="1100">1100</option>
                             </select>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-xl-6 mt-3">
+                        <div class="col-sm-6 col-lg-6 col-md-6 col-xl-6 mt-3">
                             <label class="mb-2" for="road"> <b> Road No</b></label>
                             <select class="select4 mt-3 me-3" style="width:100%;" name="road" id="road">
                                 <option value="">Select</option>
@@ -308,7 +385,7 @@
                                 <option value="5">5</option>
                             </select>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-xl-6 mt-3">
+                        <div class="col-sm-6 col-lg-6 col-md-6 col-xl-6 mt-3">
                             <label class="mb-2" for="house"><b>House No</b></label>
                             <select class="select5 mt-3" style="width:100%;" name="house" id="house">
                                 <option value="">Select</option>
@@ -322,14 +399,16 @@
 
                     </div>
 
-                    <div class="btn-link mt-5 d-flex justify-content-center">
-                        <button class="button mb-2 text-center" type="submit">Continue</button>
+                    <div class="row mt-4">
 
-                        <div class="mt-2 ms-3">
-                            <a href="/dashboard" style="color: black; text-decoration: none;">
-                                <div> <button class="btn btn-primary">Skip</button> </div>
-                            </a>
-                        </div>
+                        <span class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-2">
+                            <button class="button text-center" type="submit">Continue</button>
+                        </span>
+
+                        <a class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6" href="/dashboard" style="color: black; text-decoration: none;">
+                            <div> <button class="btn btn-sm btn-secondary button1">Skip</button> </div>
+                        </a>
+
                     </div>
 
 

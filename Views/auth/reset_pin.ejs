@@ -140,9 +140,10 @@
 
 
         .inline-block {
-            text-align: center;
-            display: inline-block;
-            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* width: 50%; */
             padding: 1em 3em;
             border-radius: 0.5em;
             background: linear-gradient(to right, #56b8dd, #6e80e6, #8467e7, #b444ee, #e639f7, #c63bf0);
@@ -151,7 +152,7 @@
             border: none;
         }
 
-        @media(max-width: 458px) {
+        /* @media(max-width: 458px) {
             .login-page {
                 align-items: flex-start;
                 padding-top: 12px;
@@ -179,11 +180,69 @@
                 align-items: center;
                 justify-content: center;
             }
-        }
+        } */
 
         form input::placeholder {
             font-size: 15px;
             color: #999999;
+        }
+    </style>
+
+
+    <style>
+        @media(max-width: 450px) {
+
+            .bg-whitee {
+                background: #F8F9FA !important;
+            }
+
+            .Esmall_device {
+                display: none !important;
+            }
+
+
+            .login-page {
+                background: none;
+                /* padding: 20px; */
+                width: 100vw;
+                /* height: 100vh; */
+                /* padding-top: 250px; */
+            }
+
+            .btn-link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .inline-block {
+
+                width: 100%;
+
+            }
+
+        }
+
+        /* @media(max-width:576px) {
+
+        .container {
+            margin-top: 100px !important;
+        }
+
+    } */
+
+        @media(max-width:767px) {
+            .Esmall_device {
+                display: none !important;
+            }
+
+            .inline-block {
+
+                width: 100%;
+
+            }
+
+
         }
     </style>
 
@@ -210,10 +269,10 @@
 
 
     <div class="login-page bg-light">
-        <div class="container bg-white ps-4 pt-4 pe-4 pb-0" style="width:70%;border-radius:10px; ;">
+        <div class="container bg-white bg-whitee ps-3 pt-3 pe-3 pb-0" style="width:70%;border-radius:10px; ;">
 
 
-            <div class="d-flex align-items-center justify-content-between">
+            <div class="Esmall_device d-flex align-items-center justify-content-between">
                 <div class="logo">
                     <svg width="39" height="40" viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="39" height="40" rx="6" fill="#2871FF" />
@@ -237,7 +296,7 @@
 
 
             <div class="row d-flex justify-content-between ">
-                <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12">
+                <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12 mb-5">
                     <img src="/assets/images/auth/reset.png" alt="" style="width:100%;">
                 </div>
 
