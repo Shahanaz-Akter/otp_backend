@@ -25,12 +25,12 @@
         }
 
         .login-page {
-            width: 100%;
+            width: 100vw;
             height: 100vh;
             overflow: scroll !important;
-
             display: inline-block;
             display: flex;
+            justify-content: center;
             align-items: center;
             background: url('/assets/images/auth/bg.png');
             background-size: cover;
@@ -290,7 +290,12 @@
 
 <body>
     <div class="login-page bg-light" style="border: 1px solid transparent;">
-        <div class="container bg-white ps-4 pt-4 pe-4 pb-0 d-flex flex-column justify-content-between" style="width:100%!important; min-height:420px;border-radius:10px; ;">
+
+
+        <!-- <div class="container bg-white ps-4 pt-4 pe-4 pb-0 d-flex flex-column justify-content-between" style="width:100%!important; min-height:420px;border-radius:10px; ;"> -->
+
+        <div class="container bg-white ps-4 pt-4 pe-4 pb-0" style="border-radius:10px; ;">
+
             <div class="d-flex align-items-center justify-content-between ch1">
                 <div class="logo">
                     <svg width="39" height="40" viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -324,6 +329,8 @@
                 </div> -->
 
                 <form class="col-md-6 col-lg-6 col-xl-6 d-flex justify-content-center align-items-center flex-column " method="POST" action="/sendOtp">
+
+
                     <div class="">
                         <div class="header mb-3">
                             <h2 class="mb-4"><b style="color: #000000">Create Account!</b></h2>
